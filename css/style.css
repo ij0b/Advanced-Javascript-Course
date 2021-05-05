@@ -1,0 +1,142 @@
+/* +++1? Стили расположенные между комментариев +++1? и ---1? часто применяю в новых 
+         проектах, есть ли в них что-нибудь лишнее, возможно ли улучшить? */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0; 
+}
+body{
+    font-family: calibri;
+    font-size:14px;
+    background: #f5f5f5;
+}
+a {
+    text-decoration: none;
+    color:#000;
+}
+li {
+    list-style: none; 
+}
+table {
+    border-collapse: collapse; 
+}
+/* ---1? Стили расположенные между комментариев +++1? и ---1? часто применяю в новых 
+         проектах, есть ли в них что-нибудь лишнее, возможно ли улучшить? */
+
+/* +++2? Что можете сказать про сочетание стилей дизайна и именование классов */
+.container{
+    max-width:1200px;
+    width:100%;
+    padding:0 15px;
+    margin-right:auto;
+    margin-left:auto;
+}
+
+.header{
+    background:#fff;
+    padding:15px;
+    text-align:right;
+    box-shadow:0 0 5px rgba(0,0,0,1);
+    margin-bottom: 50px;
+}
+.btn-cart{
+    font-weight: 700;
+    letter-spacing: 2px;
+    display: inline-block;
+    padding:10px 20px;
+    border-radius:20px 0 20px 0;
+    color:#fff;
+    border:0;
+    background:linear-gradient(to top, rgba(0,150,0,0.7), rgba(0,200,0,1));
+    cursor:pointer;
+    box-shadow:0 3px 5px rgba(0,0,0,0.7);
+}
+.btn-cart:hover{
+    background:linear-gradient(to top, rgba(0,150,0,1), rgba(0,200,0,0.7));
+}
+.products{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    text-align:center;
+}
+.product-item{
+    background:#fff;
+    width:20%;
+    padding:15px 15px 25px;
+    box-shadow:0 0 5px rgba(0,0,0,0.7);
+    margin:10px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+.product-item:hover{
+    box-shadow:0 0 5px rgba(0,0,0,1);
+}
+.product_image-container{
+    width:100%;
+    height:200px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.product_image{
+    max-width:100%;
+    max-height:200px;
+}
+.product_caption{
+    width:100%;
+    font-size:18px;
+}
+.product_caption-link{
+    color:#000;
+    display:inline-block;
+    padding:20px 0;
+}
+/* +++2.1? Следующий класс .product_price-btn-container сделал для выравнивания элемента flex по нижнему краю при
+           разной высоте названия товара. Подходит ли такое название класса? */
+.product_price-btn-container{
+    align-self: flex-end;
+    width:100%;
+}
+.product_price{
+    font-size:18px;
+    margin:0 0 20px;
+    width:100%;
+}
+.buy-btn{
+    font-weight: 700;
+    letter-spacing: 2px;
+    display: inline-block;
+    padding:10px 20px;
+    border-radius:20px 0 20px 0;
+    color:#fff;
+    border:0;
+    background:linear-gradient(to top, rgba(0,150,0,0.7), rgba(0,200,0,1));
+    cursor:pointer;
+    align-self: flex-end;
+    box-shadow:0 3px 5px rgba(0,0,0,0.7);
+}
+.buy-btn:hover{
+    background:linear-gradient(to top, rgba(0,150,0,1), rgba(0,200,0,0.7));
+}
+
+@media (max-width: 1220px) {
+    .product-item{
+        width:30%;
+    }
+}
+@media (max-width: 767px) {
+    .product-item{
+        width:45%;
+    }
+}
+@media (max-width: 479px) {
+    .product-item{
+        width:100%;
+        margin:0 0 20px;
+    }
+}
+/* ---2? Что можете сказать про сочетание стилей дизайна и именование классов */
