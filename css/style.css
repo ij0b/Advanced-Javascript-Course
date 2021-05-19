@@ -1,149 +1,109 @@
-/* +++1? Стили расположенные между комментариев +++1? и ---1? часто применяю в новых 
-    проектах, есть ли в них что-нибудь лишнее, возможно ли улучшить? */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0; 
-}
 body{
-    font-family: calibri;
-    font-size:14px;
-    background: #f5f5f5;
+    font-family: 'SF Pro Display', sans-serif;
 }
-a {
-    text-decoration: none;
-    color:#000;
-}
-li {
-    list-style: none; 
-}
-table {
-    border-collapse: collapse; 
-}
-/* ---1? Стили расположенные между комментариев +++1? и ---1? часто применяю в новых 
-            проектах, есть ли в них что-нибудь лишнее, возможно ли улучшить? */
-
-/* +++2? Что можете сказать про сочетание стилей дизайна и именование классов */
-.container{
-    max-width:1200px;
-    width:100%;
-    padding:0 15px;
-    margin-right:auto;
-    margin-left:auto;
-}
-
-.header{
+header{
     display: flex;
+    background-color: #2f2a2d;
     justify-content: space-between;
-    align-items: center;
-    background:#fff;
-    padding:15px;
-    text-align:right;
-    box-shadow:0 0 5px rgba(0,0,0,1);
-    margin-bottom: 50px;
+    color: #fafafa;
+    padding: 30px 80px;
+}
+button{
+    outline: none;
 }
 .logo{
+
     text-transform: uppercase;
     font-weight: bold;
 }
 .btn-cart{
-    font-weight: 700;
-    letter-spacing: 2px;
-    display: inline-block;
-    padding:10px 20px;
-    border-radius:20px 0 20px 0;
-    color:#fff;
-    border:0;
-    background:linear-gradient(to top, rgba(0,150,0,0.7), rgba(0,200,0,1));
-    cursor:pointer;
-    box-shadow:0 3px 5px rgba(0,0,0,0.7);
+    background-color: #fafafa;
+    padding: 10px 20px;
+    border: 1px solid transparent;
+    color: #2f2a2d;
+    border-radius: 5px;
+    transition: all ease-in-out .4s;
+    cursor: pointer;
 }
 .btn-cart:hover{
-    background:linear-gradient(to top, rgba(0,150,0,1), rgba(0,200,0,0.7));
+    background-color: transparent;
+    border-color: #fafafa;
+    color: #fafafa;
+}
+.btn-cart, .logo{
+    align-self: center;
 }
 .products{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:space-between;
-    text-align:center;
+    column-gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 200px);
+    grid-template-rows: 1fr;
+    padding: 40px 80px;
+    justify-content: space-between;
+}
+p {
+    margin: 0 0 5px 0;
 }
 .product-item{
-    background:#fff;
-    width:20%;
-    padding:15px 15px 25px;
-    box-shadow:0 0 5px rgba(0,0,0,0.7);
-    margin:10px;
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 20px 0;
 }
-.product-item:hover{
-    box-shadow:0 0 5px rgba(0,0,0,1);
+img {
+    max-width: 100%;
+    height: auto
 }
-.product_image-container{
-    width:100%;
-    height:200px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
-.product_image{
-    max-width:100%;
-    max-height:200px;
-}
-.product_caption{
-    width:100%;
-    font-size:18px;
-}
-.product_caption-link{
-    color:#000;
-    display:inline-block;
-    padding:20px 0;
-}
-/* +++2.1? Следующий класс .product_price-btn-container сделал для выравнивания элемента flex по нижнему краю при
-            разной высоте названия товара. Подходит ли такое название класса? */
-.product_price-btn-container{
-    align-self: flex-end;
-    width:100%;
-}
-.product_price{
-    font-size:18px;
-    margin:0 0 20px;
-    width:100%;
+.desc {
+    border: 1px solid #c0c0c040;
+    padding: 15px
 }
 .buy-btn{
-    font-weight: 700;
-    letter-spacing: 2px;
-    display: inline-block;
-    padding:10px 20px;
-    border-radius:20px 0 20px 0;
-    color:#fff;
-    border:0;
-    background:linear-gradient(to top, rgba(0,150,0,0.7), rgba(0,200,0,1));
-    cursor:pointer;
-    align-self: flex-end;
-    box-shadow:0 3px 5px rgba(0,0,0,0.7);
+    margin-top: 5px;
+    background-color: #2f2a2d;
+    padding: 10px 20px;
+    border: 1px solid transparent;
+    color: #fafafa;
+    border-radius: 5px;
+    transition: all ease-in-out .4s;
+    cursor: pointer;
 }
 .buy-btn:hover{
-    background:linear-gradient(to top, rgba(0,150,0,1), rgba(0,200,0,0.7));
+    background-color: transparent;
+    border-color: #2f2a2d;
+    color: #2f2a2d;
 }
 
-@media (max-width: 1220px) {
-    .product-item{
-        width:30%;
-    }
+.basket-container{
+    position:relative;
+    z-index:13;
 }
-@media (max-width: 767px) {
-    .product-item{
-        width:45%;
-    }
+.basket-container:hover .basket{
+    display:block;
 }
-@media (max-width: 479px) {
-    .product-item{
-        width:100%;
-        margin:0 0 20px;
-    }
+.basket{
+    display:none;
+    position:absolute;
+    top:100%;
+    right:0;
+    width:200px;
+    background:#fff;
+    text-align:center;
+    padding:15px 15px 0;
+    border-radius:0 0 15px 15px;
+    color:#000;
+    box-shadow:0 0 5px rgba(0,0,0,1);
 }
-/* ---2? Что можете сказать про сочетание стилей дизайна и именование классов */
+.basket-product-name{
+    margin:7px 0;
+}
+.basket-product-btn{
+    margin:0 0 15px;
+    cursor:pointer;
+    background:#000;
+    color:#fff;
+    border:0;
+    border-radius:0;
+}
