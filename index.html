@@ -11,23 +11,51 @@
 <body>
     <header>
         <div class="logo">E-shop</div>
-        <div class="basket-container">
+        <div class="cart">
+            <form action="#" class="search-form">
+                <input type="text" class="search-field">
+                <button class="btn-search" type="submit">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
             <button class="btn-cart" type="button">Корзина</button>
-            <div class="basket"></div>
+            <div class="cart-block invisible"></div>
         </div>
     </header>
     <main>
+        <form action="#" method="POST" class="callback-form">
+            <div class="callback-caption">
+                Обратный звонок
+            </div>
+            <input type="text" class="callback-field" name="name" placeholder="Имя">
+            <input type="text" class="callback-field" name="phone" placeholder="Телефон">
+            <input type="text" class="callback-field" name="email" placeholder="Email">
+            <textarea class="callback-comment" name="comment" placeholder="Комментарий"></textarea>
+            <button class="btn-callback" type="submit">
+                Отправить
+            </button>
+        </form>
         <div class="products"></div>
     </main>
-
-    <!--beforestart-->
-    <!--<p>-->
-    <!--afterstart-->
-    <!--<span></span>-->
-    <!--beforeend-->
-    <!--</p> -->
-    <!--afterend-->
+    <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"
+        integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP"
+        crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
 </body>
 
 </html>
+
+<!--<div class="cart-item" data-id="${this.id_product}">-->
+<!--<div class="product-bio">-->
+<!--<img src="${this.img}" alt="Some image">-->
+<!--<div class="product-desc">-->
+<!--<p class="product-title">${this.product_name}</p>-->
+<!--<p class="product-quantity">Quantity: ${this.quantity}</p>-->
+<!--<p class="product-single-price">$${this.price} each</p>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="right-block">-->
+<!--<p class="product-price">${this.quantity*this.price}</p>-->
+<!--<button class="del-btn" data-id="${this.id_product}">&times;</button>-->
+<!--</div>-->
+<!--</div>-->
